@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>    
+    <form class="form" id="form">
+        <p class="title nbg">S'incrire </p>
+        <p class="message nbg">Inscrivez-vous maintenant pour profiter du jeu Down.</p>
+
+        <label class="nbg">
+            <input placeholder="" type="text" class="input" id="pseudo_input">
+            <span>Pseudo</span>
+        </label>
+
+        <label class="nbg">
+            <input placeholder="" type="date" class="input" id="dob_input">
+            <span>Date de Naissance</span>
+        </label>
+                
+        <label class="nbg">
+            <input placeholder="" type="email" class="input" id="email_input">
+            <span>Email</span>
+        </label> 
+            
+        <label class="nbg">
+            <input placeholder="" type="password" class="input" id="password1_input">
+            <span>Mot de Passe</span>
+        </label>
+
+        <label class="nbg">
+            <input placeholder="" type="password" class="input" id="password2_input">
+            <span>Confirmez le Mot de Passe</span>
+        </label>
+
+        <p class="message-error nbg" id="error"></p>
+
+        <button class="submit" id="register">S'incrire</button>
+        <p class="signin nbg">Vous avez déjà un compte ? <a href="#" class="nbg">Se connecter</a> </p>
+    </form>
+
+    <script src="login.js"></script>
+</body>
+</html>

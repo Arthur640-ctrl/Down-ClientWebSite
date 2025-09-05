@@ -1,0 +1,433 @@
+@font-face {
+  font-family: 'DownFont';  /* Nom que tu donnes à ta police */
+  src: url('../fonts/DownFont.ttf') format('truetype');
+  font-weight: normal;  /* Ajuste si tu as des variantes (bold, light, etc.) */
+  font-style: normal;
+}
+
+.nbg {
+  background: none;
+}
+
+* {
+  font-family: 'DownFont', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a0c31;
+  color: white;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex; 
+  justify-content: space-between;
+  background: none;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  background: none;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 20px;
+  transition: ease-in-out 0.2s;
+  margin: 5px;
+  margin-left: 15px;
+  margin-right: 10px;
+  background: none;
+  color: white;
+}
+
+.nav-links a:hover {
+  color: #a180d6;
+}
+
+/* From Uiverse.io by alexmaracinaru */ 
+.loginBtn {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  padding: 5px 20px;
+  border-radius: 100px;
+  background: white;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.loginBtn:hover {
+  background: white;
+}
+
+.loginBtn > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+  background: none;
+}
+
+.loginBtn:hover svg {
+  transform: translateX(5px);
+}
+
+.loginBtn:active {
+  transform: scale(0.95);
+}
+
+.nav-right {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background: none;
+}
+
+.sectionHomeHero {
+  position: relative;
+  text-align: center;
+  height: 100vh; /* ou une autre unité responsive */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sectionHome {
+  height: 200vh;
+  width: 100%;
+}
+
+.sectionHome .backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* couvre sans déformation */
+  z-index: 0;
+  opacity: 0.7; /* facultatif, rend le texte plus lisible */
+}
+
+.sectionHome h1,
+.sectionHome h3 {
+  z-index: 1; /* texte au-dessus de l’image */
+  background: none;
+}
+
+.sectionHome h1 {
+  font-size: 65px;
+  margin-top: 30px;
+}
+
+.sectionHome h3 {
+  font-size: 25px;
+  max-width: 800px;
+  margin-top: 15px;
+}
+
+.homeStatsDiv {
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #a46cff; /* Bordure néon */
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.homeStatsDiv:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #a46cff; /* Effet glow au survol */
+}
+
+.homeStatsNumber {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #a46cff;
+  display: block; /* Pour forcer un saut de ligne */
+  background: none;
+  cursor: default;
+}
+
+.homeStatsLabel1 {
+  font-size: 1.1em;
+  color: white;
+  display: block;
+  background: none;
+  cursor: default;
+}
+
+.homeStatsLabel2 {
+  font-size: 0.8em;
+  color: #aaa;
+  font-style: italic;
+  background: none;
+  cursor: default;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+  z-index: 2;
+  position: relative;
+  background: none;
+}
+
+.btn-download, .btn-signup {
+  padding: 12px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Bouton Télécharger (Néon Bleu) */
+.btn-download {
+  background: #a180d6;
+  color: white;
+  box-shadow: 0 0 10px #a180d6, 0 0 20px rgba(0, 240, 255, 0.5);
+  animation: bounce 2s infinite;
+}
+
+.btn-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px #a180d6, 0 0 30px rgba(0, 240, 255, 0.7);
+}
+
+/* Bouton Créer un compte (Néon Violet) */
+.btn-signup {
+  background: #1a0c31;
+  color: white;
+  border: 2px solid #a180d6;
+  box-shadow: 0 0 10px rgba(161, 128, 214, 0.5);
+}
+
+.btn-signup:hover {
+  box-shadow: 0 0 15px #a180d6, 0 0 25px rgba(161, 128, 214, 0.7);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); /* Position normale */
+  }
+  40% {
+    transform: translateY(-10px); /* Saut vers le haut */
+  }
+  60% {
+    transform: translateY(-5px); /* Petit rebond */
+  }
+}
+
+.server-status {
+  background: rgba(26, 12, 49, 0.8);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.server-status h2 {
+  font-size: 3em;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.status-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.status-card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s;
+}
+
+.status-card i {
+  font-size: 2em;
+}
+
+.status-info {
+  text-align: left;
+}
+
+.status-title {
+  font-weight: bold;
+  display: block;
+}
+
+.status-desc {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+/* Couleurs selon le statut */
+.online {
+  animation: pulse-glow 2s infinite;
+}
+
+.operational {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 5px #00ff88; }
+  50% { box-shadow: 0 0 15px #00ff88; }
+  100% { box-shadow: 0 0 5px #00ff88; }
+}
+
+.degraded {
+  animation: pulse-glow-degraded 2s infinite;
+}
+
+@keyframes pulse-glow-degraded {
+  0% { box-shadow: 0 0 5px #ffcc00; }
+  50% { box-shadow: 0 0 15px #ffcc00; }
+  100% { box-shadow: 0 0 5px #ffcc00; }
+}
+
+.partial {
+  animation: pulse-glow-partial 2s infinite;
+}
+
+@keyframes pulse-glow-partial {
+  0% { box-shadow: 0 0 2.5px #ff9933; }
+  50% { box-shadow: 0 0 7.5px #ff9933; }
+  100% { box-shadow: 0 0 2.5px #ff9933; }
+}
+
+.outage {
+  box-shadow: 0 0 7.5px #ff5555;
+}
+
+.maintenance {
+  animation: pulse-glow-maintenance 2s infinite;
+}
+
+@keyframes pulse-glow-maintenance {
+  0% { box-shadow: 0 0 5px #a180d6; }
+  50% { box-shadow: 0 0 15px #a180d6; }
+  100% { box-shadow: 0 0 5px #a180d6; }
+}
+
+.offline {
+  border-color: #ff5555;
+  color: #ff5555;
+}
+
+/* Couleurs de ping par statut */
+.ping {
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.ping-online {
+  background: rgba(0, 255, 136, 0.2);
+  color: #00ff88;
+}
+
+.ping-degraded {
+  background: rgba(255, 204, 0, 0.2);
+  color: #ffcc00;
+}
+
+.ping-partial {
+  background: rgba(255, 153, 51, 0.2);
+  color: #ff9933;
+}
+
+.ping-outage {
+  background: rgba(255, 85, 85, 0.2);
+  color: #ff5555;
+}
+
+.ping-maintenance {
+  background: rgba(161, 128, 214, 0.2);
+  color: #a180d6;
+}
+
+.status-h2 {
+  text-align: center;
+  margin: 25px;
+  font-size: 2rem;
+}
+
+/* Catégories */
+.status-category {
+  margin-bottom: 40px;
+}
+
+.status-category h3 {
+  color: #a180d6;
+  font-size: 1.5em;
+  margin: 0 auto 20px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid #331861;
+  padding-bottom: 5px;
+}
+
+/* Cartes de statut */
+.status-card {
+  background: linear-gradient(145deg, rgba(26,12,49,0.8), rgba(10,5,20,0.9));
+  border-left: 4px solid; /* Bordure latérale */
+  width: 220px; /* Légèrement plus large */
+}
+
+/* Icônes différenciées */
+.status-card i { color: #a180d6; }
+
+/* Effet "Carte réseau" */
+.status-card:hover {
+  transform: translateY(-5px) rotateZ(1deg);
+  /* box-shadow: 0 8px 20px rgba(0, 240, 255, 0.4); */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .status-grid {
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+  }
+}
+
+/* ============================================================ */
