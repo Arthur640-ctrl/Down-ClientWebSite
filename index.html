@@ -3,155 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Down</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>DOWN - Battle Royale Vertical</title>
+    <link rel="stylesheet" href="DefaultCss.css">
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
+    <!-- Background animé avec effet de gaz -->
+    <div class="background-animation">
+        <div class="gas-effect"></div>
+        <div class="gas-effect gas-effect-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>DOWN</h1>
+                <div class="logo-subtitle">BATTLE ROYALE VERTICAL</div>
+            </div>
             <ul class="nav-links">
-                <a href="#">Acceuil</a>
-                <a href="#">Le Jeu</a>
-                <a href="#">Télécharger</a>
-                <a href="#">Médias</a>
-                <a href="#">Communauté</a>
-                <a href="#">À Propos</a>
+                <li><a href="#" class="nav-link">Accueil</a></li>
+                <li><a href="/download" class="nav-link">Télécharger</a></li>
+                <li><a href="#" class="nav-link">Actualités</a></li>
+                <li><a href="#" class="nav-link">Médias</a></li>
+                <li><a href="#" class="nav-link">Support</a></li>
             </ul>
+            <div class="nav-cta">
+                <button class="btn-primary download-button id" onclick="window.location.href='/login-register/'">Commencer</button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-            <div class="nav-right">
-                <button style="display: none;">English</button>
-                <button class="loginBtn">
-                    <span style="color: #331861; background: none;">Se connecter</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 74 74" height="34" width="34">
-                        <circle stroke-width="3" stroke="#331861" r="35.5" cy="37" cx="37"></circle>
-                        <path fill="#331861" d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"></path>
-                    </svg>
-                </button>
-            </div>
-        </nav>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- <div class="hero-badge">NOUVEAU JEU MULTIJOUEUR</div> -->
+                <h2 class="hero-title">ESSAYEZ DE SURVIVRE <span class="accent-text">DANS LA VILLE VERTICALE</span></h2>
+                <p class="hero-description">
+                    Un jeu de tir à la troisième personne dans une immense ville verticale dominée par des immeubles immenses. 
+                    Affrontez d'autres joueurs dans cet environnement oppressant où un gaz toxique avance verticalement 
+                    et horizontalement, vous forçant à vous adapter constamment.
+                </p>
 
-    </header>
-    <section class="sectionHome">
-        <section class="sectionHomeHero">
-            <img class="backgroundImage" src="assets/Chapter_4_Season_2_-_Keyart_-_Fortnite.webp" alt="">
-            <h1>Down – Survive, Vote, Domine</h1>
-            <h3>Plongez dans une ville futuriste où un gaz mortel vous force à monter. Survivrez-vous assez longtemps pour le duel final ? Les morts décident de votre destin…</h3>
-            <div style="display: flex; margin-top: 50px;">
-                <div class="homeStatsDiv">
-                    <span class="homeStatsNumber" id="homeStatsNumberAccount">🔥 N/A</span>
-                    <span class="homeStatsLabel1">Joueurs ont déjà fui le gaz !</span>
-                    <span class="homeStatsLabel2">(Comptes créés)</span>
-                </div>
-                <div class="homeStatsDiv">
-                    <span class="homeStatsNumber" id="homeStatsNumberDuelPlayed">⚡ N/A</span>
-                    <span class="homeStatsLabel1">Duels joués cette semaine !</span>
-                    <span class="homeStatsLabel2">(matchs finaux à 2 joueurs)</span>
-                </div>
-                <div class="homeStatsDiv">
-                    <span class="homeStatsNumber" id="homeStatsNumberNowGames">🕹️ N/A</span>
-                    <span class="homeStatsLabel1">Parties en cours !</span>
-                    <span class="homeStatsLabel2">(on attends que toi)</span>
-                </div>
-            </div>
-            <div class="action-buttons">
-                <button class="btn-download">
-                    <i class="fas fa-download nbg"></i> Télécharger
-                </button>
-                <button class="btn-signup" id="createAccount">
-                    <i class="fas fa-user-plus"></i> Créer un compte
-                </button>
-            </div>
-        </section>
-        <section class="server-status">
-            <h2 class="status-h2">État de l'Infrastructure</h2>
-            
-            <!-- Serveurs Physiques -->
-            <div class="status-category">
-                <h3><i class="fas fa-server"></i> Serveurs Physiques</h3>
-                <div class="status-grid">
-                    <div class="status-card online" id="dbServer">
-                        <i class="fas fa-database"></i>
-                        <div class="status-info nbg">
-                            <span class="status-title nbg">DataBase Server</span>
-                            <span class="status-desc nbg" id="dbServerLabel">En ligne <span class="ping ping-online" id="dbServerValue">25ms</span></span>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-number-container">
+                            <div class="stat-icon">🔥</div>
+                            <div class="stat-number" data-count="125000">N/A</div>
+                        </div>
+                        <div class="stat-description">
+                            <div class="stat-label">Joueurs ont déjà fui le gaz !</div>
+                            <div class="stat-subtitle">(Comptes créés)</div>
                         </div>
                     </div>
 
-                    <div class="status-card online" id="mainServer">
-                        <i class="fas fa-database"></i>
-                        <div class="status-info nbg">
-                            <span class="status-title nbg">Main Server</span>
-                            <span class="status-desc nbg" id="mainServerLabel">En ligne <span class="ping ping-online" id="mainServerValue">5ms</span></span>
+                    <div class="stat-card">
+                        <div class="stat-number-container">
+                            <div class="stat-icon">⚡</div>
+                            <div class="stat-number" data-count="85000">N/A</div>
+                        </div>
+                        <div class="stat-description">
+                            <div class="stat-label">Duels joués cette semaine !</div>
+                            <div class="stat-subtitle">(matchs finaux à 2 joueurs)</div>
                         </div>
                     </div>
 
-                    <div class="status-card online" id="nodeServerA1">
-                        <i class="fas fa-database"></i>
-                        <div class="status-info nbg">
-                            <span class="status-title nbg">Node Server A_1</span>
-                            <span class="status-desc nbg" id="nodeServerA1Label">En ligne <span class="ping ping-online" id="nodeServerA1Value">11ms</span></span>
+                    <div class="stat-card">
+                        <div class="stat-number-container">
+                            <div class="stat-icon">🕹️</div>
+                            <div class="stat-number" data-count="3200">N/A</div>
                         </div>
-                    </div>
-
-                    <div class="status-card maintenance" id="nodeServerA2">
-                        <i class="fas fa-database"></i>
-                        <div class="status-info nbg">
-                            <span class="status-title nbg">Node Server A_2</span>
-                            <span class="status-desc nbg" id="nodeServerA2Label">Maintenance <span class="ping ping-maintenance" id="nodeServerA2Value">En cours</span></span>
+                        <div class="stat-description">
+                            <div class="stat-label">Parties en cours !</div>
+                            <div class="stat-subtitle">(on attends que toi)</div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Services Logiciels -->
-            <div class="status-category">
-                <h3><i class="fas fa-code"></i> Services Logiciels</h3>
-                <div class="status-grid">
-
-                    <div class="status-card online" id="api">
-                        <i class="fas fa-cloud"></i>
-                        <div class="status-info nbg">
-                            <span class="status-title nbg">API Gateway</span>
-                            <span class="status-desc nbg" id="apiLabel"><span class="ping ping-online">42ms</span></span>
-                        </div>
-                    </div>
-
-                    <div class="status-card" id="matchmaking">
-                        <i class="fas fa-cloud"></i>
-                        <div class="status-info nbg">
-                            <span class="status-title nbg">Matchmaking</span>
-                            <span class="status-desc nbg" id="matchmakingLabel">
-                            <span class="ping ping-outage">Hors ligne - Réparation en cours</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="status-card" id="database">
-                        <i class="fas fa-cloud"></i>
-                        <div class="status-info nbg">
-                            <span class="status-title nbg">DataBase</span>
-                            <span class="status-desc nbg" id="databaseLabel">
-                            <span class="ping ping-online">42ms</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="status-card" id="luncher">
-                        <i class="fas fa-cloud"></i>
-                        <div class="status-info nbg">
-                            <span class="status-title nbg">Luncher</span>
-                            <span class="status-desc nbg" id="luncherLabel">
-                            <span class="ping ping-degraded">158ms - (⚠️ Delais)</span>
-                            </span>
-                        </div>
-                    </div>
-
+                <div class="hero-actions">
+                    <button class="btn-primary btn-large download-button" onclick="window.location.href='/download/'">Télécharger maintenant</button>
+                    <button class="btn-secondary btn-large">Regarder la bande-annonce</button>
                 </div>
             </div>
-        </section>
+        </div>
     </section>
-    <script src="/scripts/home.js"></script>
-    <script src="index.js"></script>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="section-container">
+            <h2 class="section-title">CE QUI REND DOWN <span class="accent-text">UNIQUE</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <span>🏙️</span>
+                    </div>
+                    <h3>Environnement Vertical</h3>
+                    <p>Une ville immense dominée par des gratte-ciels où la maîtrise de la verticalité est essentielle à la survie.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <span>☁️</span>
+                    </div>
+                    <h3>Gaz Toxique Dynamique</h3>
+                    <p>Un gaz qui avance verticalement ET horizontalement, forçant les joueurs à une adaptation constante.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <span>🗳️</span>
+                    </div>
+                    <h3>Système de Vote Spectateur</h3>
+                    <p>Les spectateurs éliminés peuvent influencer la partie en déclenchant des événements aléatoires.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <span>⚔️</span>
+                    </div>
+                    <h3>Fin de Partie Intense</h3>
+                    <p>Une confrontation finale en un contre un dans une atmosphère sombre et silencieuse avec une tension extrême.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="server-stats">
+        <div class="section-container">
+            <h2 class="section-title">STATUT DES <span class="accent-text">SERVEURS</span></h2>
+            <div class="stats-container">
+
+                <div class="server-node">
+                    <div class="node-header">
+                        <h3>Global API</h3>
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="node-info">
+                        <div class="info-item">
+                            <span>Etat:</span>
+                            <span>En ligne</span>
+                        </div>
+                        <div class="info-item">
+                            <span>Latence:</span>
+                            <span>24ms</span>
+                        </div>
+                        <div class="info-item">
+                            <span>Uptime:</span>
+                            <span>99.79%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="server-node">
+                    <div class="node-header">
+                        <h3>Base de Donné</h3>
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="node-info">
+                        <div class="info-item">
+                            <span>Etat:</span>
+                            <span>En ligne</span>
+                        </div>
+                        <div class="info-item">
+                            <span>Latence:</span>
+                            <span>42ms</span>
+                        </div>
+                        <div class="info-item">
+                            <span>Uptime:</span>
+                            <span>99.98%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="server-node">
+                    <div class="node-header">
+                        <h3>Node A1</h3>
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="node-info">
+                        <div class="info-item">
+                            <span>Etat:</span>
+                            <span>En Ligne</span>
+                        </div>
+                        <div class="info-item">
+                            <span>Latence:</span>
+                            <span>68ms</span>
+                        </div>
+                        <div class="info-item">
+                            <span>Uptime:</span>
+                            <span>98.97%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="server-node">
+                    <div class="node-header">
+                        <h3>Node A2</h3>
+                        <div class="status-indicator maintenance"></div>
+                    </div>
+                    <div class="node-info">
+                        <div class="info-item">
+                            <span>Etat:</span>
+                            <span>Maintenance</span>
+                        </div>
+                        <div class="info-item">
+                            <span>Latence:</span>
+                            <span>-</span>
+                        </div>
+                        <div class="info-item">
+                            <span>Uptime:</span>
+                            <span>-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="add-node-form">
+                <h3>Ajouter un nouveau serveur</h3>
+                <div class="form-grid">
+                    <input type="text" placeholder="Nom du serveur" class="form-input">
+                    <input type="text" placeholder="Région" class="form-input">
+                    <button class="btn-secondary">Ajouter</button>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="section-container">
+            <div class="cta-content">
+                <h2>PRÊT À <span class="accent-text">DESCENDRE</span> DANS L'ACTION ?</h2>
+                <p>Téléchargez DOWN maintenant et affrontez le gaz toxique dans la ville verticale !</p>
+                <button class="btn-primary btn-large btn-glow download-button" onclick="window.location.href='/download/'">Télécharger gratuitement</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="section-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>DOWN</h2>
+                    <p>Battle Royale Vertical</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Jeu</h4>
+                        <a href="#">Télécharger</a>
+                        <a href="#">Mises à jour</a>
+                        <a href="#">Patch Notes</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Communauté</h4>
+                        <a href="#">Discord</a>
+                        <a href="#">Forums (Soon)</a>
+                        <a href="#">Événements (Soon)</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="#">FAQ (Soon)</a>
+                        <a href="#">Contact (Soon)</a>
+                        <a href="#">Signaler un bug (Soon)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DOWN. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="visuals.js"></script>
+    <script src="script.js"></script>
+    <script src="footerLoader.js"></script>
+    
 </body>
 </html>
